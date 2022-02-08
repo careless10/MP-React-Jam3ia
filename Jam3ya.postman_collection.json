@@ -1,0 +1,367 @@
+{
+	"info": {
+		"_postman_id": "5e1acac1-1925-4bfb-af6c-d26652fedea3",
+		"name": "Jam3ya",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"Salim3ateeji\",\r\n    \"password\":\"ABC123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://coded-miniproject-jam3ya-be.herokuapp.com/signin",
+					"protocol": "https",
+					"host": [
+						"coded-miniproject-jam3ya-be",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"test\",\r\n    \"password\":\"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://coded-miniproject-jam3ya-be.herokuapp.com/signin",
+					"protocol": "https",
+					"host": [
+						"coded-miniproject-jam3ya-be",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Rooms",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://coded-miniproject-jam3ya-be.herokuapp.com/jam3ya",
+					"protocol": "https",
+					"host": [
+						"coded-miniproject-jam3ya-be",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"jam3ya"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a room",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTZkOTE0YjU1Y2EzMGFiMzE1MGNjYzUiLCJ1c2VybmFtZSI6IjIxIiwiZW1haWwiOiIyMSIsIndhbGxldCI6MTAwLCJleHAiOjU5NTQ2NTU3MjM5OTksImlhdCI6MTYzNDY1NTcyM30.q9-xepOc5C1mR0BJdQPIb0VTKj_kO12kdX_azwMRG-4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"This is a jam3ya data sent from frontend\",\r\n    \"image\":\"https://www.ukrgate.com/…g-Yourself-Anything1.jpg\",\r\n    \"amount\":100,\r\n    \"limit\":10,\r\n    \"startDate\":\"Wed Oct 06 2021 00:00:00 GMT+0300 (Eastern European Summer Time)\",\r\n    \"endDate\":\"2021-09-20T15:35:32.059+00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://coded-miniproject-jam3ya-be.herokuapp.com/jam3ya",
+					"protocol": "https",
+					"host": [
+						"coded-miniproject-jam3ya-be",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"jam3ya"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a room by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTZkYTc4YTMzNDBhNzc5ZDhlZDczNzEiLCJ1c2VybmFtZSI6IkFiZHVsbGFoMSIsImVtYWlsIjoiYWxraGFsZGlqa0BnbWFpbC5jb20iLCJ3YWxsZXQiOjEwMCwiZXhwIjo1OTU0NzI1MDI4ODIwLCJpYXQiOjE2MzQ3MjUwMjh9.9aL5_ixv3pmtmsYUX6FZj7u3XUERDu9aqV3zwApOeGA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"updated zahraa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://coded-miniproject-jam3ya-be.herokuapp.com/jam3ya/${jam3yiaId}",
+					"protocol": "https",
+					"host": [
+						"coded-miniproject-jam3ya-be",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"jam3ya",
+						"${jam3yiaId}"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete room by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTZkODA2NDU1Y2EzMGFiMzE1MGNiY2QiLCJ1c2VybmFtZSI6ImZhaGFkIiwiZW1haWwiOiJmYWhhZF9vc2FtYUBob3RtYWlsLmNvbSIsIndhbGxldCI6MTAwLCJleHAiOjU5NTQ3MTg5ODM4MjEsImlhdCI6MTYzNDcxODk4M30.eKDhJAo8SJkAUTg1WO_Zwje_PxOhGMcIyITpkBCjkbw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://coded-miniproject-jam3ya-be.herokuapp.com/jam3ya/${jam3yiaId}",
+					"protocol": "https",
+					"host": [
+						"coded-miniproject-jam3ya-be",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"jam3ya",
+						"${jam3yiaId}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Join a room by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ4YWE0NDdlYzIzZmNjMGNiZWU2MjgiLCJ1c2VybmFtZSI6InRlc3QiLCJlbWFpbCI6ImFhQGFhLmFhIiwid2FsbGV0Ijo1MCwiZXhwIjo1OTU0NzE5NTI0MTkzLCJpYXQiOjE2MzQ3MTk1MjR9.HUK-up5pOeQUdoGJ-8QLJIBLhyLhEtPKFhhv-1y0nKw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://coded-miniproject-jam3ya-be.herokuapp.com/jam3ya/join/${jam3yiaId}",
+					"protocol": "https",
+					"host": [
+						"coded-miniproject-jam3ya-be",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"jam3ya",
+						"join",
+						"${jam3yiaId}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Leave a room by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ4YWE0NDdlYzIzZmNjMGNiZWU2MjgiLCJ1c2VybmFtZSI6InRlc3QiLCJlbWFpbCI6ImFhQGFhLmFhIiwid2FsbGV0Ijo1MCwiZXhwIjo1OTU0NzE5NTI0MTkzLCJpYXQiOjE2MzQ3MTk1MjR9.HUK-up5pOeQUdoGJ-8QLJIBLhyLhEtPKFhhv-1y0nKw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\":\"6148aa447ec23fcc0cbee628\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://coded-miniproject-jam3ya-be.herokuapp.com/jam3ya/leave/${jam3yiaId}",
+					"protocol": "https",
+					"host": [
+						"coded-miniproject-jam3ya-be",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"jam3ya",
+						"leave",
+						"${jam3yiaId}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update profile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"\",\r\n    \"password\":\"\",\r\n    \"email\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://coded-miniproject-jam3ya-be.herokuapp.com/update",
+					"protocol": "https",
+					"host": [
+						"coded-miniproject-jam3ya-be",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update wallet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"wallet\": 50\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://coded-miniproject-jam3ya-be.herokuapp.com/wallet",
+					"protocol": "https",
+					"host": [
+						"coded-miniproject-jam3ya-be",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"wallet"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer"
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
